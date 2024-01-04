@@ -6,4 +6,12 @@
  */
 export function uniqueElements(array: number[]): number[] {
     // 請在此處寫下你的程式碼
+    let result: number[] = []
+    let last: number = 0
+    for (let i = 0; i < array.length; i++) {
+         if(array[i] == last) continue
+         result.push(array[i])
+         last = array[i]
+    }
+    return result
 }
